@@ -1,0 +1,84 @@
+/* ============================================
+   BATIMOVIL IOT - MAIN CSS
+   Variables, tipografía, y estilos globales
+   ============================================ */
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-primary: #1f2028;
+    --bg-secondary: #2a2f3b;
+    --bg-tertiary: #323841;
+    --accent-primary: #d9847a;
+    --accent-secondary: #c85858;
+    --accent-success: #b5c5b0;
+    --accent-warning: #d68070;
+    --accent-danger: #e74c3c;
+    --accent-giro: #a8b8a3;
+    --accent-giro-alt: #8b9d85;
+    --text-primary: #f5f1ed;
+    --text-secondary: #b8b5b1;
+    --border-color: #3d4249;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-primary);
+    overflow: hidden;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-secondary);
+}
+
+/* Tipografía base */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Utility classes */
+.text-primary { color: var(--accent-primary) !important; }
+.text-secondary { color: var(--accent-secondary) !important; }
+.text-success { color: var(--accent-success) !important; }
+.text-danger { color: var(--accent-danger) !important; }
+.text-muted { color: var(--text-secondary) !important; }
+
+.fw-bold { font-weight: 700; }
+.fw-semi-bold { font-weight: 600; }
+.small { color: var(--text-secondary); }

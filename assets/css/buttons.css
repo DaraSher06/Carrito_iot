@@ -1,0 +1,196 @@
+/* ============================================
+   BATIMOVIL IOT - BUTTONS CSS
+   Estilos de botones y controles
+   ============================================ */
+
+/* BOTONES DE CONTROL BASE */
+.control-btn {
+    height: 55px;
+    font-weight: 600;
+    font-size: 0.85em;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.control-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+.control-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* BOTONES PRIMARIOS - Adelante/Atrás */
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-primary) 0%, #c75a50 100%);
+    border-color: transparent !important;
+    color: white;
+    font-weight: 700;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(217, 132, 122, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0px);
+}
+
+/* BOTONES OUTLINE PRIMARY - Diagonales */
+.btn-outline-primary {
+    color: var(--accent-primary) !important;
+    border-color: var(--accent-primary) !important;
+    background: transparent;
+    border-width: 2px;
+}
+
+.btn-outline-primary:hover {
+    background: rgba(217, 132, 122, 0.1) !important;
+    color: var(--accent-primary) !important;
+    box-shadow: 0 8px 20px rgba(217, 132, 122, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary:active {
+    transform: translateY(0px);
+}
+
+/* BOTONES DANGER - Detener */
+.btn-danger {
+    background: linear-gradient(135deg, var(--accent-danger) 0%, #d63031 100%);
+    border-color: transparent !important;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
+}
+
+.btn-danger:active {
+    transform: translateY(0px);
+}
+
+/* BOTONES OUTLINE INFO - Giro 90° */
+.btn-outline-info {
+    color: var(--accent-secondary) !important;
+    border-color: var(--accent-secondary) !important;
+    background: transparent;
+    border-width: 2px;
+}
+
+.btn-outline-info:hover {
+    background: rgba(200, 88, 88, 0.1) !important;
+    color: var(--accent-secondary) !important;
+    box-shadow: 0 8px 20px rgba(200, 88, 88, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-outline-info:active {
+    transform: translateY(0px);
+}
+
+/* BOTONES OUTLINE WARNING - GIRO 360° */
+.btn-outline-warning {
+    color: var(--accent-giro) !important;
+    border-color: var(--accent-giro) !important;
+    background: transparent;
+    border-width: 2px;
+    font-weight: 700;
+}
+
+.btn-outline-warning:hover {
+    background: rgba(168, 184, 163, 0.15) !important;
+    color: var(--accent-giro) !important;
+    box-shadow: 0 8px 20px rgba(168, 184, 163, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-outline-warning:active {
+    transform: translateY(0px);
+}
+
+/* BOTONES SUCCESS - Ejecutar Demo */
+.btn-success {
+    background: linear-gradient(135deg, var(--accent-success) 0%, #9eaf95 100%);
+    border-color: transparent !important;
+    color: white;
+    font-weight: 700;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(181, 197, 176, 0.4);
+}
+
+.btn-success:active {
+    transform: translateY(0px);
+}
+
+/* BOTONES SECONDARY - Grabar Demo */
+.btn-secondary {
+    background: linear-gradient(135deg, #c85858 0%, #b8504a 100%);
+    border-color: transparent !important;
+    color: white;
+    font-weight: 700;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(200, 88, 88, 0.4);
+}
+
+.btn-secondary:active {
+    transform: translateY(0px);
+}
+
+/* ESTADOS DESHABILITADOS */
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.btn:disabled:hover {
+    box-shadow: none;
+}
+
+/* RESPONSIVE PARA BOTONES */
+@media (max-width: 992px) {
+    .control-btn {
+        height: 50px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .control-btn {
+        height: 45px;
+        font-size: 0.75em;
+    }
+
+    .btn-sm {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+}

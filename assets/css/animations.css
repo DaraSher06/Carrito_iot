@@ -1,0 +1,127 @@
+/* ============================================
+   BATIMOVIL IOT - ANIMATIONS CSS
+   Keyframes y transiciones
+   ============================================ */
+
+/* ANIMACIÓN DE FLOTACIÓN */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+}
+
+/* ANIMACIÓN FADE IN */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* ANIMACIÓN DE PULSO VERDE (CONECTADO) */
+@keyframes pulse-success {
+    0%, 100% { 
+        box-shadow: 0 0 10px rgba(181, 197, 176, 0.5); 
+    }
+    50% { 
+        box-shadow: 0 0 20px rgba(181, 197, 176, 0.8); 
+    }
+}
+
+/* ANIMACIÓN DE PULSO ROJO (DESCONECTADO) */
+@keyframes pulse-danger {
+    0%, 100% { 
+        box-shadow: 0 0 10px rgba(231, 76, 60, 0.5); 
+    }
+    50% { 
+        box-shadow: 0 0 20px rgba(231, 76, 60, 0.8); 
+    }
+}
+
+/* ANIMACIÓN DE ALERTA */
+@keyframes alerta-pulse {
+    0%, 100% { 
+        background: linear-gradient(135deg, rgba(231, 76, 60, 0.15), rgba(220, 38, 38, 0.15));
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    50% { 
+        background: linear-gradient(135deg, rgba(231, 76, 60, 0.25), rgba(220, 38, 38, 0.25));
+        box-shadow: 0 8px 32px rgba(231, 76, 60, 0.3);
+    }
+}
+
+/* ANIMACIÓN DE PARPADEO */
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* ANIMACIÓN SPIN (CARGANDO) */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ANIMACIÓN SLIDE IN */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* APLICAR ANIMACIONES */
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.fadeIn {
+    animation: fadeIn 0.4s ease;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+.slideIn {
+    animation: slideIn 0.3s ease;
+}
+
+/* TRANSICIONES GLOBALES */
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.transition-colors {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.transition-transform {
+    transition: transform 0.3s ease;
+}
+
+/* EFECTO HOVER SUAVE */
+.hover-lift:hover {
+    transform: translateY(-4px);
+}
+
+/* EFECTO GLOW */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(217, 132, 122, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(217, 132, 122, 0.6);
+    }
+}
+
+.glow {
+    animation: glow 2s ease-in-out infinite;
+}
